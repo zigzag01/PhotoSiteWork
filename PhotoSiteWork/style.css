@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+header{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: powderblue;
+    padding-left: 4.5vw;
+    padding-right: 5vw;
+    color: white;
+}
+header h1{
+    font-size: 3rem;
+}
+header input{
+    width: 30vw;
+    height: 4vh;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.100);
+    /* border-radius: 20% 20% 20% 20%; */
+}
+.menuList{
+    /* width: 50px;
+    height: 50px; */
+    background-color: transparent;
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+.noneStyleButton{
+    border: none;
+}
+.vidInfoPage{
+    width: 100vw;
+    height: 100vh;
+    background-color: darkslategrey;
+    align-items: center;
+    justify-content: center;
+}
+.intro{
+    padding-top: 30vh;
+    padding-left: 10vw;
+    height: 60vh;
+    width: 70vw;
+    font-size: 3rem;
+    color: white;
+}
+.figureButton{
+    width: 8vw;
+    height: 7vh;
+    border-radius: 30% 0% 30% 0%;
+    border: solid white;
+    color: white;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.exampleWork{
+    width: 100vw;
+    height: 90vh;
+    background-color: teal;
+    padding-top: 10vh;
+
+}
+.textExampleWork{
+    font-size: 2.5rem;
+    color: white;
+    padding-left: 10vw;
+}
+.exampleInlineBlocks{
+    padding-top: 10vh;
+    justify-content: space-between;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+.exampleBlock{
+    height: 26vh;
+    width: 12vw;
+    background-color: white;
+}
+.shortInfo1{
+    height: 20vh;
+    width: 12vw;
+    background-color: powderblue;
+    padding-top: 15vh;
+}
+.word{
+    width: 5vw;
+    height: 5vh;
+    background-color: darkslategrey;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    padding-top: 1vh;
+}
+.shortInfo2{
+    text-align: center;
+    font-size: 1.2rem;
+    color: darkslategrey;
+}
