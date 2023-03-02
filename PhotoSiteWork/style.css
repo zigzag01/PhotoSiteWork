@@ -59,6 +59,11 @@ header input{
     background-color: transparent;
     font-size: 1.2rem;
     cursor: pointer;
+    transition: 0.3s all ease;
+}
+.figureButton:hover{
+    background-color: white;
+    color: teal;
 }
 .exampleWork{
     width: 100vw;
