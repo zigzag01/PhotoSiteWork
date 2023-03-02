@@ -13,7 +13,6 @@
         <h1>SITE NAME</h1>
         <input type="text" name="siteSearch" placeholder="&#128269;">
         <button class="noneStyleButton menuList"><i class="bi bi-list"></i></button>
-        <!-- <i class="bi bi-search"></i> -->
     </header>
 
     <main>
@@ -66,14 +65,69 @@
 
         </div>
 
-        <div class="toBookAStudio">
-            
+        <div class="questions">
+
+            <div class="textFAQ">
+                <h2>Here are the FAQs!</h2><br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe est fugit iusto?</p><br>
+            </div>
+
+            <ul class="faqsList">
+                <li>
+                    <div class=faqs>
+                        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                        <div><button class="noneStyleButton textBlockEvent">&#8744;</button></div>
+                    </div>
+                    <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ratione tempore eos vitae mollitia omnis voluptates neque sunt repellendus, cumque, dolorum magnam sed culpa, perferendis dolore laboriosam? Delectus non ab commodi saepe dolor praesentium libero et animi distinctio at exercitationem, officia sapiente voluptatum aliquam fugit temporibus porro recusandae earum quaerat tenetur nam a, harum ratione? Distinctio fugit veniam unde culpa. Quam, facere recusandae dolor placeat corrupti voluptatibus, harum ab blanditiis vitae illo libero commodi. Officiis, perspiciatis quisquam alias dolor deleniti dignissimos illo omnis voluptates in error suscipit temporibus hic veritatis nostrum voluptatum commodi impedit itaque nam eaque molestiae cupiditate quasi!</p>
+                </li>
+                <li>
+                    <div class=faqs>
+                        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                        <div><button class="noneStyleButton">&#8744;</button></div>
+                    </div>
+                    <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ratione tempore eos vitae mollitia omnis voluptates neque sunt repellendus, cumque, dolorum magnam sed culpa, perferendis dolore laboriosam? Delectus non ab commodi saepe dolor praesentium libero et animi distinctio at exercitationem, officia sapiente voluptatum aliquam fugit temporibus porro recusandae earum quaerat tenetur nam a, harum ratione? Distinctio fugit veniam unde culpa. Quam, facere recusandae dolor placeat corrupti voluptatibus, harum ab blanditiis vitae illo libero commodi. Officiis, perspiciatis quisquam alias dolor deleniti dignissimos illo omnis voluptates in error suscipit temporibus hic veritatis nostrum voluptatum commodi impedit itaque nam eaque molestiae cupiditate quasi!</p>
+                </li>
+                <li>
+                    <div class=faqs>
+                        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                        <div><button class="noneStyleButton">&#8744;</button></div>
+                    </div>
+                    <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ratione tempore eos vitae mollitia omnis voluptates neque sunt repellendus, cumque, dolorum magnam sed culpa, perferendis dolore laboriosam? Delectus non ab commodi saepe dolor praesentium libero et animi distinctio at exercitationem, officia sapiente voluptatum aliquam fugit temporibus porro recusandae earum quaerat tenetur nam a, harum ratione? Distinctio fugit veniam unde culpa. Quam, facere recusandae dolor placeat corrupti voluptatibus, harum ab blanditiis vitae illo libero commodi. Officiis, perspiciatis quisquam alias dolor deleniti dignissimos illo omnis voluptates in error suscipit temporibus hic veritatis nostrum voluptatum commodi impedit itaque nam eaque molestiae cupiditate quasi!</p>
+                </li>
+                <li>
+                    <div class=faqs>
+                        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                        <div><button class="noneStyleButton">&#8744;</button></div>
+                    </div>
+                    <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ratione tempore eos vitae mollitia omnis voluptates neque sunt repellendus, cumque, dolorum magnam sed culpa, perferendis dolore laboriosam? Delectus non ab commodi saepe dolor praesentium libero et animi distinctio at exercitationem, officia sapiente voluptatum aliquam fugit temporibus porro recusandae earum quaerat tenetur nam a, harum ratione? Distinctio fugit veniam unde culpa. Quam, facere recusandae dolor placeat corrupti voluptatibus, harum ab blanditiis vitae illo libero commodi. Officiis, perspiciatis quisquam alias dolor deleniti dignissimos illo omnis voluptates in error suscipit temporibus hic veritatis nostrum voluptatum commodi impedit itaque nam eaque molestiae cupiditate quasi!</p>
+                </li>
+                <li>
+                    <div class=faqs>
+                        <div><p>Lorem ipsum dolor sit amet consectetur adipisicing.</p></div>
+                        <div><button class="noneStyleButton">&#8744;</button></div>
+                    </div>
+                    <p class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ratione tempore eos vitae mollitia omnis voluptates neque sunt repellendus, cumque, dolorum magnam sed culpa, perferendis dolore laboriosam? Delectus non ab commodi saepe dolor praesentium libero et animi distinctio at exercitationem, officia sapiente voluptatum aliquam fugit temporibus porro recusandae earum quaerat tenetur nam a, harum ratione? Distinctio fugit veniam unde culpa. Quam, facere recusandae dolor placeat corrupti voluptatibus, harum ab blanditiis vitae illo libero commodi. Officiis, perspiciatis quisquam alias dolor deleniti dignissimos illo omnis voluptates in error suscipit temporibus hic veritatis nostrum voluptatum commodi impedit itaque nam eaque molestiae cupiditate quasi!</p>
+                </li>
+            </ul>
         </div>
 
     </main>
 
-    <footer>
+    <footer></footer>
 
-    </footer>
+    <!-- <script src="script.html"></script> -->
+
+    <script>
+
+        let textBlock = document.querySelector('.textBlockEvent');
+        let par = document.querySelector('.answer')
+        textBlock.addEventListener('click', showText);
+        
+        function showText(){
+            par.classList.toggle('.textBlockEvent');
+        }
+    
+    </script>
+
 </body>
 </html>

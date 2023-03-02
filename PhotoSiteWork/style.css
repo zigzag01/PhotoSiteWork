@@ -22,11 +22,8 @@ header input{
     height: 4vh;
     border: none;
     background-color: rgba(0, 0, 0, 0.100);
-    /* border-radius: 20% 20% 20% 20%; */
 }
 .menuList{
-    /* width: 50px;
-    height: 50px; */
     background-color: transparent;
     font-size: 3rem;
     color: white;
@@ -34,6 +31,8 @@ header input{
 }
 .noneStyleButton{
     border: none;
+    cursor: pointer;
+    background: transparent;
 }
 .vidInfoPage{
     width: 100vw;
@@ -52,14 +51,14 @@ header input{
 }
 .figureButton{
     width: 8vw;
-    height: 7vh;
+    height: 8vh;
     border-radius: 30% 0% 30% 0%;
     border: solid white;
     color: white;
     background-color: transparent;
     font-size: 1.2rem;
     cursor: pointer;
-    transition: 0.3s all ease;
+    transition: 0.5s all ease;
 }
 .figureButton:hover{
     background-color: white;
@@ -70,7 +69,6 @@ header input{
     height: 90vh;
     background-color: teal;
     padding-top: 10vh;
-
 }
 .textExampleWork{
     font-size: 2.5rem;
@@ -110,4 +108,52 @@ header input{
     text-align: center;
     font-size: 1.2rem;
     color: darkslategrey;
+    align-items: center;
+}
+.questions{
+    width: 100vw;
+    height: 90vh;
+    background-color: rgb(62, 141, 115);
+}
+.textFAQ{
+    padding-top: 10vh;
+    font-size: 2.5rem;
+    color: white;
+    padding-left: 10vw;
+}
+.faqsList{
+    padding-left: 10vw;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.faqs{
+    width: 60vw;
+    height: 8vh;
+    background-color: white;
+    margin-top: 1vh;
+    font-size: 1.5rem;
+    padding-top: 3vh;
+    padding-left: 1vw;
+    color: darkslategrey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.faqs button{
+    font-size: 1.5rem;
+    color: darkslategrey;
+    padding-right: 1vw;
+}
+.answer{
+    width: 60vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    /* height: 6vh; */
+    display: none;
+    transition: 1s;
+}
+.textBlockEvent{
+    display: block;
+    height: 6vh;
 }
