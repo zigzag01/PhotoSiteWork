@@ -94,6 +94,31 @@ header input{
     width: 12vw;
     background-color: powderblue;
     padding-top: 15vh;
+    transition: all 1s;
+}
+.bgpic1{
+    background: url(img/color-pic1.jpg) no-repeat center/110%; 
+}
+.bgpic1:hover{
+    transform: scale(1.2);
+}
+.bgpic2{
+    background: url(img/color-pic2.jpg) no-repeat center/110%;
+}
+.bgpic2:hover{
+    transform: scale(1.2);
+}
+.bgpic3{
+    background: url(img/color-pic4.jpg) no-repeat center/110%;
+}
+.bgpic3:hover{
+    transform: scale(1.2);
+}
+.bgpic4{
+    background: url(img/color-pic3.jpg) no-repeat center/110% ;
+}
+.bgpic4:hover{
+    transform: scale(1.2);
 }
 .word{
     width: 5vw;
@@ -149,11 +174,12 @@ header input{
     width: 60vw;
     padding-top: 1vh;
     padding-bottom: 1vh;
-    /* height: 6vh; */
+    height: 6vh;
     display: none;
     transition: 1s;
 }
 .textBlockEvent{
     display: block;
     height: 6vh;
+    background-color: white;
 }
