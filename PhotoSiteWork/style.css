@@ -208,9 +208,6 @@ header input{
     background-color: white;
     font-size: 1.3rem;
 }
-/* .faqs button:hover{
-    transform: rotateX(180deg);
-} */
 .photographers{
     width: 100vw;
     height: 100vh;
@@ -260,4 +257,47 @@ header input{
 }
 .bi{
     font-size: 1.8rem;
+}
+
+.lastNewsPage{
+    /* width: 100vw; */
+    height: 90vh;
+    background-color: teal;
+    padding-top: 10vh;
+}
+.textLastNews{
+    font-size: 2.5rem;
+    color: white;
+    padding-left: 10vw;
+}
+.newsBlockList{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* flex-flow: row nowrap; */
+    padding: 0;
+}
+.newsBlock{
+    height: 46vh;
+    width: 60vw;
+    background-color: darkolivegreen;
+    list-style: none;
+}
+.circleButton button{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50% 50% 50% 50%;
+    border: none;
+    color: teal;
+    background-color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+.circleButton button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.circleButton{
+    margin-left: 70vw;
+    margin-bottom: 16px;
 }
