@@ -23,6 +23,9 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, quos?</p><br>
                 <button class="figureButton">read more</button>
             </div>
+            <div class="imgChange">
+                
+            </div>
         </div>
 
         <div class="exampleWork">
@@ -171,8 +174,8 @@
             </div>
             
             <div class="circleButton">
-                <button><</button>
-                <button>></button>
+                <button class="circleButtonStyle"><</button>
+                <button class="circleButtonStyle">></button>
             </div>
 
             <ul class="newsBlockList">
@@ -182,6 +185,42 @@
             </ul>
 
             
+
+        </div>
+
+        <div class="editPhotoPage">
+
+            <div class="textEditPhoto">
+                <h2>textEditPhoto</h2><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><br>
+            </div>
+
+            <div class="photoEditingBlock">
+                <div class="funcButtonsLeft">
+                    <button class="circleButtonStyle">&#10003;</button><br>
+                    <button class="circleButtonStyle">&#10226;</button><br>
+                    <button class="iconButton"><i class="bi bi-file-earmark-richtext"></i></button><br>
+                </div>
+
+                <div class="photoWindow"></div>
+
+                <div class="funcButtonsRight">
+                    <button class="figureButton">find random image</button><br>
+                    <button class="figureButton">share image</button><br>
+                    <button class="figureButton">download image</button><br>
+                </div>
+                
+                <div class="filterTools">
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                </div>
+                
+
+                </div>
+            </div>
 
         </div>
 
@@ -217,18 +256,21 @@
         } */
 
 
-        const url = 'https://api.unsplash.com/search/photos?query=random&per_page=30&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
+        const url = 'https://api.unsplash.com/search/photos?query=person&per_page=30&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
         fetch(url)
-        .then(res => res.json())
-        .then(data => {
-            console.log(data.results);
-            return data;
-        })
-        .then(function(urls){
-            /* let arrLinks = [];
-            arrLinks = arrLinks.toggle(urls.regular);
-            return arrLinks; */
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data.results);
+                return data.results;
+            })
+            .then(function(arr){
+                let arrLinks = [];
+                for (let item of arr) {
+                    arrLinks.push(item.urls.regular);
+                }
+                    console.log(arrLinks)
+                    return arrLinks;
+            })
 
         
 

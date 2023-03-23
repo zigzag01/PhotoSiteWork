@@ -27,7 +27,6 @@ header input{
 }
 .menuList{
     background-color: transparent;
-    font-size: 3rem;
     color: white;
     cursor: pointer;
 }
@@ -42,6 +41,7 @@ header input{
     background-color: darkslategrey;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .intro{
     padding-top: 30vh;
@@ -50,6 +50,12 @@ header input{
     width: 70vw;
     font-size: 3rem;
     color: white;
+    position: absolute;
+    z-index: 90;
+}
+.imgChange{
+    position: absolute;
+    z-index: 80;
 }
 .figureButton{
     width: 8vw;
@@ -256,9 +262,8 @@ header input{
     font-size: 1.1rem;
 }
 .bi{
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
-
 .lastNewsPage{
     /* width: 100vw; */
     height: 90vh;
@@ -283,7 +288,7 @@ header input{
     background-color: darkolivegreen;
     list-style: none;
 }
-.circleButton button{
+.circleButtonStyle{
     width: 5vh;
     height: 5vh;
     border-radius: 50% 50% 50% 50%;
@@ -294,10 +299,73 @@ header input{
     cursor: pointer;
     transition: 0.2s all ease;
 }
+.circleButtonStyle:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}
 .circleButton button:hover{
     background-color: rgba(255, 255, 255, 0.5);
 }
 .circleButton{
     margin-left: 70vw;
     margin-bottom: 16px;
+}
+.editPhotoPage{
+    width: 100vw;
+    height: 100vh;
+    background-color: teal;
+    padding-top: 10vh;
+}
+.textEditPhoto{
+    font-size: 2.5rem;
+    color: white;
+    padding-left: 10vw;
+}
+.photoEditingBlock{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.iconButton{
+    background-color: transparent;
+    color: white;
+    font-size: 2rem;
+    border: none;
+    border-radius: 50% 50% 50% 50%;
+    cursor: pointer;
+    transition: 0.2s all ease;
+}
+.iconButton:hover{
+    transform: scale(1.2);
+}
+.funcButtonsLeft{
+    display: flex;
+    flex-direction: column;
+}
+.photoWindow{
+    height: 30vw;
+    width: 30vw;
+    background-color: seagreen;
+}
+.funcButtonsRight{
+    display: flex;
+    flex-direction: column;
+}
+.filterTools{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.filterTools button{
+    width: 8vw;
+    height: 8vh;
+    border: solid white;
+    color: white;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+.filterTools button:hover{
+    background-color: white;
+    color: teal;
 }
