@@ -56,6 +56,10 @@ header input{
 .imgChange{
     position: absolute;
     z-index: 80;
+    width: 100vw;
+    height: 90vh;
+    margin-top: 10vh;
+    /* transition: 0.1s all ease; */
 }
 .figureButton{
     width: 8vw;
@@ -72,6 +76,9 @@ header input{
     background-color: white;
     color: teal;
 }
+
+
+
 .exampleWork{
     width: 100vw;
     height: 90vh;
@@ -166,6 +173,9 @@ header input{
     height: 70px;
     width: 100%;
 }
+
+
+
 .questions{
     width: 100vw;
     /* height: 90vh; */
@@ -214,6 +224,9 @@ header input{
     background-color: white;
     font-size: 1.3rem;
 }
+
+
+
 .photographers{
     width: 100vw;
     height: 100vh;
@@ -264,6 +277,9 @@ header input{
 .bi{
     font-size: 2rem;
 }
+
+
+
 .lastNewsPage{
     /* width: 100vw; */
     height: 90vh;
@@ -309,9 +325,12 @@ header input{
     margin-left: 70vw;
     margin-bottom: 16px;
 }
+
+
+
 .editPhotoPage{
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     background-color: teal;
     padding-top: 10vh;
 }
@@ -335,7 +354,7 @@ header input{
     transition: 0.2s all ease;
 }
 .iconButton:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .funcButtonsLeft{
     display: flex;
@@ -344,7 +363,7 @@ header input{
 .photoWindow{
     height: 30vw;
     width: 30vw;
-    background-color: seagreen;
+    background-color: white;
 }
 .funcButtonsRight{
     display: flex;

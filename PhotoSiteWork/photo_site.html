@@ -24,7 +24,7 @@
                 <button class="figureButton">read more</button>
             </div>
             <div class="imgChange">
-                
+              <!--   <img src="https://images.unsplash.com/photo-1596451984287-7a274406cbca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxODE4ODF8MHwxfHNlYXJjaHwxfHxwaG90b3Nlc3Npb258ZW58MHx8fHwxNjgwMDEyMTc5&ixlib=rb-4.0.3&q=80&w=1080" alt=""> -->
             </div>
         </div>
 
@@ -191,7 +191,7 @@
         <div class="editPhotoPage">
 
             <div class="textEditPhoto">
-                <h2>textEditPhoto</h2><br>
+                <h2>textEditPhoto</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><br>
             </div>
 
@@ -202,7 +202,9 @@
                     <button class="iconButton"><i class="bi bi-file-earmark-richtext"></i></button><br>
                 </div>
 
-                <div class="photoWindow"></div>
+                <div class="photoWindow">
+                    <img src="" alt="">
+                </div>
 
                 <div class="funcButtonsRight">
                     <button class="figureButton">find random image</button><br>
@@ -232,8 +234,12 @@
 
     <script>
 
+        const bgImg = document.querySelector('.imgChange'); 
         let textBlock = document.querySelectorAll('.textBlockEvent');
         let par = document.querySelector('.answer');
+
+        const arrLinks = [];
+        const arrRand = [];
 
         for (let item of textBlock) {
             item.addEventListener('click', e => showText(e));
@@ -244,10 +250,8 @@
             par.classList.toggle('textBlockEvent');
         }
 
-        
 
         /* let newsBlock = document.querySelectorAll('.newsBlockEvent');
-        let
         for (let item of textBlock) {
             item.addEventListener('click', e => moveNewsBlock(e));
         }
@@ -256,23 +260,55 @@
         } */
 
 
-        const url = 'https://api.unsplash.com/search/photos?query=person&per_page=30&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
+        const url = 'https://api.unsplash.com/search/photos?query=photosession&per_page=30&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                console.log(data.results);
+                /* console.log(data.results); */
                 return data.results;
             })
             .then(function(arr){
-                let arrLinks = [];
                 for (let item of arr) {
                     arrLinks.push(item.urls.regular);
                 }
-                    console.log(arrLinks)
+                    console.log(arrLinks);
+                    /* console.log(arrLinks[0]); */
                     return arrLinks;
             })
-
+            .then(()=> {
+                setInterval(() => {
+                    checkLinkImage += 1;
+                    bgImg.style.background = `url(${arrLinks[checkLinkImage]}) no-repeat center / cover `;
+                    /* console.log(arrLinks[checkLinkImage]) */
+                    if(checkLinkImage == arrLinks.length - 1){
+                        checkLinkImage = 0;
+                    }
+                }, 1000)
+            })
+        let checkLinkImage = -1;
         
+
+
+        /* let uploadPhoto = document.querySelector('.bi-file-earmark-richtext'); */
+        
+        const url2 = 'https://api.unsplash.com/search/photos?query=random&per_page=30&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';        
+        fetch(url2)
+            .then(res => res.json())
+            .then(data => {
+                return data.results;
+            })
+            .then(function(arr){
+                for (let item of arr) {
+                    arrRand.push(item.urls.regular);
+                }
+                    console.log(arrRand);
+                    return arrRand;
+            })
+            .then(()=> {
+                bgImg.style.background = `url(${arrRand}) no-repeat center / cover `;
+            })
+            /* console.log(Math.round(Math.random()*(arrRand.length - 1) + 1)); */
+
 
     </script>
 
