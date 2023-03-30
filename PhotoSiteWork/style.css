@@ -374,7 +374,7 @@ header input{
     flex-direction: column;
     justify-content: space-between;
 }
-.filterTools button{
+/* .filterTools button{
     width: 8vw;
     height: 8vh;
     border: solid white;
@@ -383,8 +383,28 @@ header input{
     font-size: 1.2rem;
     cursor: pointer;
     transition: 0.5s all ease;
-}
-.filterTools button:hover{
+} */
+/* .filterTools button:hover{
     background-color: white;
+    color: teal;
+} */
+.filterName{
+    height: 6vh;
+    width: 18vw;
+    border-radius: 0;
+    border: solid white;
+    color: white;
+    background-color: transparent;
+    font-size: 1.2rem;
+}
+.sideButton{
+    height: 2vw;
+    width: 2vw;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.5s all ease;
+}
+.sideButton:hover{
     color: teal;
 }
