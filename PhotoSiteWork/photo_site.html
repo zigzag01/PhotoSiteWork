@@ -167,7 +167,7 @@
 
         </div>
 
-        <div class="lastNewsPage">
+        <!-- <div class="lastNewsPage">
 
             <div class="textLastNews">
                 <h2>textLastNews</h2><br>
@@ -185,42 +185,24 @@
                 <li class="newsBlock">3</li>
             </ul>
 
-            
-
-        </div>
+        </div> -->
 
         <div class="editPhotoPage">
 
             <div class="textEditPhoto">
-                <h2>textEditPhoto</h2>
+                <h2>textEditPhoto</h2><br>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p><br>
             </div>
 
             <div class="photoEditingBlock">
-                <!-- <div class="funcButtonsLeft">
-                    <button class="circleButtonStyle">&#10003;</button><br>
-                    <button class="circleButtonStyle">&#10226;</button><br>
-                    <button class="iconButton"><i class="bi bi-file-earmark-richtext"></i></button><br>
-                </div> -->
-
-                <!-- <div class="photoWindow" id="canvas">
-                    <img src="" alt="">
-                </div> -->
 
                 <canvas class="photoWindow" id="canvas"></canvas>
 
                 <div class="funcButtonsRight">
-                    <button class="figureButton uplBut">upload image</button><br>
-                    <button class="figureButton downBut">download image</button><br>                    
+                    <input type="file" id="upload-file" placeholder="Upload a Picture">
+                    <label for="upload-file" class="figureButton uplBut">upload image</label><br>
+                    <button id="download-btn" class="figureButton downBut">download image</button><br>                    
                 </div>
-                
-                <!-- <div class="filterTools">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
-                    <button>4</button>
-                    <button>5</button>
-                </div> -->
 
                 <div class="filterTools">
                     <div class="filterButton">
@@ -254,18 +236,50 @@
 
     </main>
 
-    <footer></footer>
+    <footer>
+
+        <div class="container">
+            <h2>ContainerText</h2><br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, voluptas?</p><br>
+            <button class="figureButton">sign up</button>
+        </div> <br> <br>
+
+        <div class="linksList">
+            <ul>
+                <li><button class="noneStyleButton"><i class="bi bi-instagram"></i></button></li>
+                <li><button class="noneStyleButton"><i class="bi bi-twitter"></i></button></li>
+                <li><button class="noneStyleButton"><i class="bi bi-facebook"></i></button></li>
+                <li><button class="noneStyleButton"><i class="bi bi-youtube"></i></button></li>
+                <li><button class="noneStyleButton"><i class="bi bi-pinterest"></i></button></li>
+                <li><button class="noneStyleButton"><i class="bi bi-snapchat"></i></button></li>
+            </ul>
+        </div> <br> <br>
+
+        <hr> <br> <br>
+
+        <div class="signsFooter">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui consequuntur voluptas laborum suscipit accusamus iste.</h3><br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, corporis.</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem, delectus?</p>
+        </div>
+
+    </footer>
+
+
 
     <!-- <script src="script.html"></script> -->
+
+
 
     <script>
 
         const bgImg = document.querySelector('.imgChange'); 
+        const bgImg1 = document.querySelector('.container'); //
         let textBlock = document.querySelectorAll('.textBlockEvent');
         let par = document.querySelector('.answer');
 
         const arrLinks = [];
-        const arrRand = [];
+        const arr1 = [];
 
         for (let item of textBlock) {
             item.addEventListener('click', e => showText(e));
@@ -276,36 +290,22 @@
             par.classList.toggle('textBlockEvent');
         }
 
-
-        /* let newsBlock = document.querySelectorAll('.newsBlockEvent');
-        for (let item of textBlock) {
-            item.addEventListener('click', e => moveNewsBlock(e));
-        }
-        function moveNewsBlock(e){
-            
-        } */
-
-
         const url = 'https://api.unsplash.com/search/photos?query=photosession&per_page=30&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                /* console.log(data.results); */
                 return data.results;
             })
             .then(function(arr){
                 for (let item of arr) {
                     arrLinks.push(item.urls.regular);
                 }
-                    /* console.log(arrLinks); */
-                    /* console.log(arrLinks[0]); */
                     return arrLinks;
             })
             .then(()=> {
                 setInterval(() => {
                     checkLinkImage += 1;
                     bgImg.style.background = `url(${arrLinks[checkLinkImage]}) no-repeat center / cover `;
-                    /* console.log(arrLinks[checkLinkImage]) */
                     if(checkLinkImage == arrLinks.length - 1){
                         checkLinkImage = 0;
                     }
@@ -315,9 +315,7 @@
         
 
 
-        /* let uploadPhoto = document.querySelector('.bi-file-earmark-richtext'); */
-        
-        /* const url2 = 'https://api.unsplash.com/search/photos?query=random&per_page=30&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';        
+        const url2 = 'https://api.unsplash.com/search/photos?query=photocamera&per_page=10&client_id=SouHY7Uul-OxoMl3LL3c0NkxUtjIrKwf3tsGk1JaiVo';
         fetch(url2)
             .then(res => res.json())
             .then(data => {
@@ -325,15 +323,11 @@
             })
             .then(function(arr){
                 for (let item of arr) {
-                    arrRand.push(item.urls.regular);
-                }
-                    console.log(arrRand);
-                    return arrRand;
+                    arr1.push(item.urls.regular);
+                }                
+                bgImg1.style.background = `url(${arr1[9]}) no-repeat center / cover`;
+                return arr1;
             })
-            .then(()=> {
-                bgImg.style.background = `url(${arrRand}) no-repeat center / cover `;
-            }) */
-
 
         let img = new Image();
         let canvas = document.querySelector("canvas");
@@ -388,6 +382,35 @@
                 }
 
             }
+        });
+
+
+
+        document.addEventListener("click", function(e) {
+            let fileExtension = fileName.slice(-4);
+            if (fileExtension == ".jpg" || fileExtension == ".png") {
+                let actualName = fileName.substring(0, fileName.length - 4);
+            }
+            download(canvas, actualName + "-edited.jpg");
+        });
+
+        document.addEventListener("change", function() {
+            let file = document.querySelector('#upload-file').files[0];
+            let reader = new FileReader();
+            if (file) {
+                fileName = file.name;
+                reader.readAsDataURL(file);
+            }
+            reader.addEventListener("load", function () {
+                img = new Image();
+                img.src = reader.result;
+                img.onload = function () {
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img, 0, 0, img.width, img.height);
+                    $("#canvas").removeAttr("data-caman-id");
+                }
+            }, false);
         });
 
     </script>

@@ -35,10 +35,12 @@ header input{
     cursor: pointer;
     background: transparent;
 }
+
 .vidInfoPage{
     width: 100vw;
     height: 100vh;
-    background-color: darkslategrey;
+    /* background-color: darkslategrey; */
+    background-color: rgb(80, 146, 136);
     align-items: center;
     justify-content: center;
     position: relative;
@@ -68,7 +70,7 @@ header input{
     border: solid white;
     color: white;
     background-color: transparent;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     cursor: pointer;
     transition: 0.5s all ease;
 }
@@ -81,8 +83,9 @@ header input{
 
 .exampleWork{
     width: 100vw;
-    height: 90vh;
-    background-color: teal;
+    height: 100vh;
+    /*  background-color: teal; */
+    background-color: rgb(80, 146, 136);
     padding-top: 10vh;
 }
 .textExampleWork{
@@ -178,8 +181,9 @@ header input{
 
 .questions{
     width: 100vw;
-    /* height: 90vh; */
-    background-color: rgb(62, 141, 115);
+    height: 100vh;
+    /* background-color: rgb(85, 110, 51); */
+    background-color: rgb(80, 146, 136);
 }
 .textFAQ{
     padding-top: 10vh;
@@ -192,6 +196,7 @@ header input{
     display: flex;
     flex-direction: column;
     list-style: none;
+    position: absolute
 }
 .faqs{
     width: 60vw;
@@ -205,6 +210,7 @@ header input{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
 }
 .faqs button{
     font-size: 1.5rem;
@@ -230,8 +236,9 @@ header input{
 .photographers{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(62, 141, 115);
-    padding-top: 20vh;
+    /* background-color: rgb(62, 141, 115); */
+    background-color: rgb(80, 146, 136);
+    padding-top: 10vh;
 }
 .textPhotographers{
     font-size: 2.5rem;
@@ -239,7 +246,7 @@ header input{
     padding-left: 10vw;
 }
 .photographerList{
-    padding-top: 3vh;
+    padding-top: 4vh;
     justify-content: space-between;
     padding-left: 10vw;
     padding-right: 10vw;
@@ -283,7 +290,8 @@ header input{
 .lastNewsPage{
     /* width: 100vw; */
     height: 90vh;
-    background-color: teal;
+    /* background-color: teal; */
+    background-color: rgb(80, 146, 136);
     padding-top: 10vh;
 }
 .textLastNews{
@@ -330,8 +338,9 @@ header input{
 
 .editPhotoPage{
     width: 100vw;
-    height: 95vh;
-    background-color: teal;
+    height: 100vh;
+    /* background-color: teal; */
+    background-color: rgb(80, 146, 136);
     padding-top: 10vh;
 }
 .textEditPhoto{
@@ -374,20 +383,6 @@ header input{
     flex-direction: column;
     justify-content: space-between;
 }
-/* .filterTools button{
-    width: 8vw;
-    height: 8vh;
-    border: solid white;
-    color: white;
-    background-color: transparent;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: 0.5s all ease;
-} */
-/* .filterTools button:hover{
-    background-color: white;
-    color: teal;
-} */
 .filterName{
     height: 6vh;
     width: 18vw;
@@ -407,4 +402,48 @@ header input{
 }
 .sideButton:hover{
     color: teal;
+}
+.funcButtonsRight input{
+    visibility: hidden;
+}
+.funcButtonsRight label{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+footer{
+    padding-top: 10vh;
+    width: 100vw;
+    height: 90vh;
+    background-color: rgb(80, 146, 136);
+}
+.container{
+    width: 100vw;
+    height: 40vh;
+    padding-top: 4vh;
+    padding-left: 10vw;
+    font-size: 2.5rem;
+    color: white;
+}
+.linksList{
+    width: 100vw;
+}
+.linksList ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+.signsFooter{
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
