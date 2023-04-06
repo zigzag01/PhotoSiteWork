@@ -30,6 +30,13 @@ header input{
     color: white;
     cursor: pointer;
 }
+.dropdown-menu{
+    list-style: none;
+    width: 10vw;
+    height: 10vh;
+    background-color: white;
+    display: none;
+}
 .noneStyleButton{
     border: none;
     cursor: pointer;
@@ -267,7 +274,7 @@ header input{
 .circlePortret{
     width: 10vw;
     height: 10vw;
-    background: url(img/baw-pic1.jpg);
+    /* background: url(img/baw-pic1.jpg); */
     border-radius: 50%;
 }
 .nameAndExperience{
@@ -411,6 +418,9 @@ header input{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.downBut{
+    font-size: 1.1rem;
 }
 
 
