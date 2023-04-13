@@ -188,9 +188,10 @@ header input{
 
 .questions{
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     /* background-color: rgb(85, 110, 51); */
     background-color: rgb(80, 146, 136);
+    position: relative;
 }
 .textFAQ{
     padding-top: 10vh;
@@ -203,7 +204,7 @@ header input{
     display: flex;
     flex-direction: column;
     list-style: none;
-    position: absolute
+   /*  position: absolute; */
 }
 .faqs{
     width: 60vw;
@@ -245,7 +246,7 @@ header input{
     height: 100vh;
     /* background-color: rgb(62, 141, 115); */
     background-color: rgb(80, 146, 136);
-    padding-top: 10vh;
+    padding-top: 16vh;
 }
 .textPhotographers{
     font-size: 2.5rem;
